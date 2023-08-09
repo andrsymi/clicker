@@ -37,7 +37,8 @@ def main():
             hours, mins, secs = convert_to_preferred_format(now)
             if hours >= max_hours and mins >= max_mins:
                 print('\nMax running time reached. Stopping...')
-                playsound('bell.mp3')
+                audio_file = os.path.dirname(__file__) + 'bell.mp3'
+                playsound(audio_file)
                 pyautogui.click(x_close, y_close, clicks=1, button="left")  # click 'close window' button
                 exit(0)
             print(f'\rRunning time: %02d:%02d:%02d' % (hours, mins, secs), end=' ')

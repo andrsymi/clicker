@@ -2,7 +2,6 @@ import pyautogui
 import time
 import os
 from playsound import playsound
-playsound('/path/to/a/sound/file/you/want/to/play.mp3')
 
 
 def convert_to_preferred_format(sec):

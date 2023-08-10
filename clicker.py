@@ -47,8 +47,10 @@ def main():
             if wait_minutes >= minutes_to_wait:
                 waiting_time = .0
                 minutes_to_wait = random.randint(1, 6)
+                x_last, y_last = pyautogui.position()  # get current mouse position
                 pyautogui.click(x, y - 60, clicks=1, button="left")  # click on window to bring it in first plane
                 pyautogui.click(x, y, clicks=1, button="left")  # click on selected position
+                pyautogui.moveTo(x_last, y_last)  # move mouse to last position
             time.sleep(5)
 
     except KeyboardInterrupt:

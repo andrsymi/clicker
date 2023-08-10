@@ -49,7 +49,7 @@ def main():
                 wait_time = .0
                 pyautogui.click(x, y - 60, clicks=1, button="left")  # click on window to bring it in first plane
                 pyautogui.click(x, y, clicks=1, button="left")  # click on selected position
-            # time.sleep(50)
+            time.sleep(5)
 
     except KeyboardInterrupt:
         print('\nTerminated.')
